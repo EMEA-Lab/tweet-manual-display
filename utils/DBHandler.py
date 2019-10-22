@@ -8,7 +8,7 @@ DB_USERNAME = os.environ.get('DB_USERNAME', None)
 DB_KEY = os.environ.get('DB_KEY', None) 
 DB_NAME = os.environ.get('DB_NAME', None) 
 
-client = MongoClient(DB_URL, DB_PORT)
+client = MongoClient(DB_URL, int(DB_PORT))
 db = client[DB_NAME]
 db.authenticate(DB_USERNAME, DB_KEY)
 

@@ -1,4 +1,4 @@
-from flask import Blueprint, Response
+from flask import Blueprint, Response, request
 from TwitterAPI import TwitterAPI
 from http import HTTPStatus
 
