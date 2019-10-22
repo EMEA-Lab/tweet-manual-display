@@ -1,31 +1,32 @@
-function init() {    
-    
-    let addButton = document.querySelector('#add-button');
-    
-    addButton.addEventListener("click", function () {  
+function init() {        
+
+    function getTweet() {
         
-        let handleInput = document.querySelector('#tweet-input').value;        
-        
-        addTweet(handleInput);
-        
-    });
-    
-    function addTweet(tweetID) {
-        
-        let data = {}
-        
-        fetch('/add-tweet', {
-                method: 'POST',
-                body: JSON.stringify(data)
+        fetch('/get-latest-tweet', {
+                method: 'GET'
             })
             .then(response => response.json())    
-            .then(jsonData => console.log(jsonData))
+            .then(jsonData => updateTweetHTML(unescape(jsonData['html'])))
             .catch(err => {
                 //error block
             });
-            
-            
+                    
     }
+    
+    function updateTweetHTML(HTMLString) {
+        
+        console.log(HTMLString);
+        
+        let introWrapper = document.querySelector('#tweet-wrapper');    
+        
+        introWrapper.innerHTML = HTMLString;
+        
+        twttr.widgets.load(
+          document.getElementById("tweet-wrapper")
+        );        
+    }
+    
+    getTweet();
 }
 
 init();

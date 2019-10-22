@@ -14,6 +14,10 @@ def default_route():
     
     return send_from_directory('www', 'index.html')
     
+@app.route('/admin')
+def admin_route():    
+    return send_from_directory('www', 'admin.html')    
+    
 @app.route('/js/<path:path>')
 def send_js(path):
     return send_from_directory('www/js', path)

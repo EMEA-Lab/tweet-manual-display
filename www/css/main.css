@@ -20,7 +20,7 @@ html, body {
   padding: 0;
   min-height: 100%;
   height: auto;
-  background-color: #FFF;
+  background-color: #1DA1F2;  
   font-family: 'Helvetica Neue', sans-serif; }
 
 b {
@@ -62,6 +62,10 @@ header {
     padding-top: 30.7%;      
   }
 
+#tweet-wrapper .twitter-tweet {
+    margin: 0 auto;    
+}
+
 .section-content {
   background-color: #1DA1F2;    
   position: absolute;
@@ -90,7 +94,7 @@ header {
     margin: 0;
     margin-top: 4%;
     display: inline-block; }
-  input#handle-input {
+  input#tweet-input {
     height: 45px;    
     width: 45%;    
     border-radius: 3px;    
