@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("fonts/HelveticaNeue.eot");
+  src: url("fonts/HelveticaNeue.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeue.woff") format("woff"), url("fonts/HelveticaNeue.svg#HelveticaNeue") format("svg");
+  font-weight: 100;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url("fonts/HelveticaNeue-Bold.eot");
+  src: url("fonts/HelveticaNeue-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/HelveticaNeue-Bold.woff") format("woff"), url("fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+* {
+  text-rendering: geometricPrecision; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  height: auto;
+  background-color: #FFF;
+  font-family: 'Helvetica Neue', sans-serif; }
+
+b {
+  font-family: 'Helvetica Neue Bold', sans-serif; }
+
+.button-link {
+  background-color: #FFF;
+  color: #000;
+  font-weight: bold;
+  font-family: 'Helvetica Neue Bold', sans-serif;
+  padding: 1vw 2vw;
+  font-size: 1.3vw;
+  border-radius: 2vw;
+  text-decoration: none;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-property: background-color;
+  transition-property: background-color; }
+  .button-link:hover {
+    background-color: #ddd; }
+
+header {
+  background-color: #1DA1F2;    
+  height: 85px;
+  width: 100%;
+  padding: 30px 35px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  header .twitter-logo {
+    height: 25px;
+    width: auto; }
+
+.section-wrapper {
+  padding-top: 49.7%;
+  position: relative; }
+  
+  .intro-wrapper {
+    padding-top: 30.7%;      
+  }
+
+.section-content {
+  background-color: #1DA1F2;    
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 4% 11%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  .section-content .pbt-logo {
+    width: 55%;
+    height: auto;
+    margin-bottom: 3%; }
+  .section-content h1 {
+    font-family: 'Helvetica Neue Bold', sans-serif;      
+    color: #FFF;
+    font-size: 4vw;
+    width: 46%; }    
+  .section-content p {
+    color: #FFF;
+    font-size: 1.18vw;
+    width: 46%; }
+  .section-content .button-link {
+    margin: 0;
+    margin-top: 4%;
+    display: inline-block; }
+  input#handle-input {
+    height: 45px;    
+    width: 45%;    
+    border-radius: 3px;    
+    border: 1px solid transparent;    
+    border-top-color: transparent;
+    border-top-style: solid;
+    border-top-width: 1px;    
+    border-top: none;    
+    display: block;    
+    font-size: 29px;    
+    padding: 7px;      
+  }
+
+@media screen and (max-width: 68.75em) {
+  .button-link {
+    padding: 11px 22px;
+    font-size: 14px;
+    border-radius: 22px; }
+
+  .section-wrapper {
+    padding-top: initial; }
+    .section-wrapper .section-content {
+      position: relative; }
+      .section-wrapper .section-content p {
+        font-size: 13px; }
+}
+
+@media screen and (max-width: 40.4em) {
+  .section-content .pbt-logo {
+    width: 100%; }
+  .section-content p {
+    width: 100%; }
+  .section-content .button-link {
+    display: block;
+    text-align: center;
+    margin: 40px auto; }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table; }
