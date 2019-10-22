@@ -4,18 +4,27 @@ function init() {
     
     addButton.addEventListener("click", function () {  
         
-        let handleInput = document.querySelector('#tweet-input').value;        
+        let tweetInput = document.querySelector('#tweet-input').value;        
         
-        addTweet(handleInput);
+        addTweet(tweetInput);
         
     });
     
-    function addTweet(tweetID) {
+    function addTweet(tweetURL) {
         
-        let data = {}
+        tweetIDArr = tweetURL.split('/');
+        tweetID = tweetIDArr[tweetIDArr.length - 1];
+        
+        let data = {            
+            'tweetID': tweetID
+        }    
         
         fetch('/add-tweet', {
                 method: 'POST',
+                headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+                },                
                 body: JSON.stringify(data)
             })
             .then(response => response.json())    
