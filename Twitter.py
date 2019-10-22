@@ -52,7 +52,7 @@ def addTweetRecieved():
         
         
     return ('', HTTPStatus.OK)
-    
+
 @twitter.route("/get-latest-tweet")
 def getLatestTweet():         
     
