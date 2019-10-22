@@ -62,6 +62,10 @@ header {
     padding-top: 30.7%;      
   }
 
+#tweet-wrapper .twitter-tweet {
+    margin: 0 auto;    
+}
+
 .section-content {
   background-color: #1DA1F2;    
   position: absolute;

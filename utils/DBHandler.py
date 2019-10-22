@@ -29,3 +29,13 @@ def addTweetIfNew(tweetID, tweetData):
         return True
     else:
         return False
+        
+def getLatestTweet():
+    
+    tweet = list(db.entries.find().limit(1).sort([( '$natural', -1 )]))[0]
+    
+    if tweet is None:
+    
+        return False
+    else:
+        return tweet

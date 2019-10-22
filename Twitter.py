@@ -52,5 +52,22 @@ def addTweetRecieved():
         
         
     return ('', HTTPStatus.OK)
+
+@twitter.route("/get-latest-tweet")
+def getLatestTweet():         
+    
+    latestTweet = DBHandler.getLatestTweet()    
+    
+    if latestTweet == False:
+        return Response(json.dumps({'message': 'Error retrieving'}),  mimetype='application/json')
+    else:
+        
+        tweetURL = 'https://twitter.com/' + latestTweet['tweetData']['user']['screen_name'] + '/status/' + latestTweet['tweetData']['id_str']        
+        
+        r = requests.request("GET", 'https://publish.twitter.com/oembed?omit_script=true&hide_thread=true&url=' + tweetURL)        
+        
+        print(r.json())
+        
+        return Response(json.dumps(r.json()),  mimetype='application/json')           
     
     

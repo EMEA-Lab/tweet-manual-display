@@ -18,29 +18,24 @@
     
     <main>
         
-        <section id="tweet-wrapper">
+        <section id="intro-wrapper" class="section-wrapper intro-wrapper">
             
-
+            <div class="section-content clearfix">
+                <h1>Add Tweet to Display</h1>
+                
+                <p>
+                    Paste a tweet URL and click 'Add to Display'
+                </p>
+                
+                <input type="text" id="tweet-input" />
+                
+                <a class="button-link" id="add-button" href="#">Add to Display</a>
+            </div>
+            
         </section>
     </main>
 
-    <script>window.twttr = (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0],
-        t = window.twttr || {};
-      if (d.getElementById(id)) return t;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://platform.twitter.com/widgets.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    
-      t._e = [];
-      t.ready = function(f) {
-        t._e.push(f);
-      };
-    
-      return t;
-    }(document, "script", "twitter-wjs"));</script>
-    <script src="/js/main.js"></script> 
+    <script src="/js/admin.js"></script> 
         
 </body>
 
