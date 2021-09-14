@@ -62,7 +62,20 @@ header {
     padding-top: 30.7%;      
   }
 
-#tweet-wrapper .twitter-tweet {
+#tweet-wrapper-1, #tweet-wrapper-2 {
+    transform: scale(1.5);
+    
+    margin-top: 8%;    
+    transition-duration: 500ms;
+    transition-property: opacity;
+    opacity: 0;
+    
+    position: absolute;    
+    left: 0;    
+    right: 0;    
+}
+
+#tweet-wrapper-1 .twitter-tweet, #tweet-wrapper-2 .twitter-tweet {
     margin: 0 auto;    
 }
 

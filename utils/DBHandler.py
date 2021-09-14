@@ -2,16 +2,12 @@ from pymongo import MongoClient
 
 import os
 
-DB_URL = os.environ.get('DB_URL', None)
-DB_PORT = os.environ.get('DB_PORT', None)
-DB_USERNAME = os.environ.get('DB_USERNAME', None)
-DB_KEY = os.environ.get('DB_KEY', None) 
-DB_NAME = os.environ.get('DB_NAME', None) 
+USER = str(os.environ.get('MLAB_NAME', None))
+PASS = str(os.environ.get('MLAB_PASS', None))
 
-client = MongoClient(DB_URL, int(DB_PORT), retryWrites = False)
-db = client[DB_NAME]
-db.authenticate(DB_USERNAME, DB_KEY)
-	
+client = MongoClient('mongodb+srv://' + USER + ':' + PASS + '@tweet-display.t3de1.mongodb.net/tweet-display?retryWrites=true&w=majority')
+db = client['tweet-display']
+
 def addTweetIfNew(tweetID, tweetData):
         
     #check if tweet exists in collection
