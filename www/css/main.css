@@ -63,8 +63,6 @@ header {
   }
 
 #tweet-wrapper-1, #tweet-wrapper-2 {
-    transform: scale(1.5);
-    
     margin-top: 8%;    
     transition-duration: 500ms;
     transition-property: opacity;
@@ -144,6 +142,12 @@ header {
     display: block;
     text-align: center;
     margin: 40px auto; }
+}
+
+@media screen and (min-width: 73em) {
+  #tweet-wrapper-1, #tweet-wrapper-2 {
+    transform: scale(1.5);
+  }
 }
 
 .clearfix::after {
